@@ -1,0 +1,172 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
+    background-attachment: fixed;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Headings and text */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 1.35rem;
+    margin: 28px 0 14px;
+}
+
+h3 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Input section */
+.input-section {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 14px;
+
+    color: white;
+    font-size: 1rem;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+input:focus {
+    outline: 2px solid #8ed6f5;
+    outline-offset: 2px;
+}
+
+/* Analyze button */
+button {
+    width: 100%;
+    padding: 14px;
+
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+/* Status messages */
+#message {
+    margin-top: 12px;
+}
+
+.success {
+    color: #8ff0b3;
+}
+
+.error {
+    color: #ffaaaa;
+}
+
+/* Analysis results */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.result-box {
+    padding: 16px;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    overflow-wrap: anywhere;
+}
+
+.result-box p {
+    font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+
+        <header>
+            <h1>🔢 Number Analyzer</h1>
+            <p>Enter a list of numbers and let the app analyze them.</p>
+        </header>
+
+        <section class="input-section">
+            <label for="numberInput">
+                Enter numbers separated by commas:
+            </label>
+
+            <input
+                type="text"
+                id="numberInput"
+                placeholder="Example: 1, 2, 3, 4..."
+            >
+
+            <button id="analyzeButton">Analyze</button>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section id="results" hidden>
+
+            <h2>📋 Your Numbers</h2>
+            <div class="result-box">
+                <p id="numbersDisplay"></p>
+            </div>
+
+            <h2>📊 Analysis Results</h2>
+
+            <div class="metrics-grid">
+                <div class="result-box">
+                    <h3>Total</h3>
+                    <p id="total"></p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Average</h3>
+                    <p id="average"></p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Largest Number</h3>
+                    <p id="largest"></p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Smallest Number</h3>
+                    <p id="smallest"></p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Number of Values</h3>
+                    <p id="count"></p>
+                </div>
+            </div>
+
+            <h2>🔵 Even Numbers</h2>
+            <div class="result-box">
+                <p id="evenNumbers"></p>
+            </div>
+
+            <h2>🟠 Odd Numbers</h2>
+            <div class="result-box">
+                <p id="oddNumbers"></p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Number Analyzer | Built with Python and Streamlit</p>
+            <p>𝕴~𝕶𝕺𝕯🪷</p>
+        </footer>
+
+    </main>
+</body>
+</html>
